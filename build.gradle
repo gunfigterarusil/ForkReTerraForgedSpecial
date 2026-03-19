@@ -34,19 +34,19 @@ minecraft {
         client {
             workingDirectory project.file('run')
             property 'forge.logging.console.level', 'debug'
-            mods { reterraforged { source sourceSets.main } }
+            mods { rtfs { source sourceSets.main } }
         }
         server {
             workingDirectory project.file('run')
             property 'forge.logging.console.level', 'debug'
-            mods { reterraforged { source sourceSets.main } }
+            mods { rtfs { source sourceSets.main } }
         }
         data {
             workingDirectory project.file('run')
-            args '--mod', 'reterraforged', '--all',
+            args '--mod', 'rtfs', '--all',
                  '--output', file('src/generated/resources/'),
                  '--existing', file('src/main/resources/')
-            mods { reterraforged { source sourceSets.main } }
+            mods { rtfs { source sourceSets.main } }
         }
     }
 }
@@ -56,8 +56,8 @@ sourceSets.main.resources {
 }
 
 mixin {
-    add sourceSets.main, 'reterraforged.refmap.json'
-    config 'reterraforged.mixins.json'
+    add sourceSets.main, 'rtfs.refmap.json'
+    config 'rtfs.mixins.json'
 }
 
 repositories {
@@ -93,12 +93,12 @@ jar {
     manifest {
         attributes([
             'Specification-Title'     : project.mod_id,
-            'Specification-Vendor'    : 'raccoonman',
+            'Specification-Vendor'    : 'rayman',
             'Specification-Version'   : '1',
             'Implementation-Title'    : project.name,
             'Implementation-Version'  : project.version,
-            'Implementation-Vendor'   : 'raccoonman',
-            'MixinConfigs'            : 'reterraforged.mixins.json'
+            'Implementation-Vendor'   : 'rayman',
+            'MixinConfigs'            : 'rtfs.mixins.json'
         ])
     }
 }

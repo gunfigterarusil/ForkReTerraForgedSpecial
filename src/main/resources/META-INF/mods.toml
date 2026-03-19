@@ -1,27 +1,27 @@
 modLoader="javafml"
 loaderVersion="[47,)"
 license="MIT"
-mixinConfigs="reterraforged.mixins.json"
+mixinConfigs="rtfs.mixins.json"
 
 [[mods]]
-modId="reterraforged"
+modId="rtfs"
 displayName="ReTerraForged"
 version="${version}"
-authors="dags,Won-Ton,raccoonman"
-credits="dags,Won-Ton,raccoonman"
+authors="rayman"
+credits="rayman"
 logoFile="logo.png"
-displayURL="https://github.com/racoonman2/reterraforged/"
-issueTrackerURL="https://github.com/racoonman2/reterraforged/issues"
+displayURL="https://github.com/racoonman2/rtfs/"
+issueTrackerURL="https://github.com/racoonman2/rtfs/issues"
 description="A continuation of https://github.com/TerraForged/TerraForged"
 
-[[dependencies.reterraforged]]
+[[dependencies.rtfs]]
     modId="forge"
     mandatory=true
     versionRange="[47,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.reterraforged]]
+[[dependencies.rtfs]]
 	modId = "minecraft"
 	mandatory = true
 	versionRange = "[1.20.1,)"
