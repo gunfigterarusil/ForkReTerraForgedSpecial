@@ -1,0 +1,416 @@
+20:19:33: Executing 'runClient'…
+
+
+> Configure project :
+MixinGradle is skipping eclipse integration, extension not found
+
+> Task :downloadMcpConfig
+> Task :extractSrg UP-TO-DATE
+> Task :createMcpToSrg UP-TO-DATE
+
+> Task :compileJava
+Note: SpongePowered MIXIN Annotation Processor Version=0.8.5 (MixinGradle Version=0.7.38)
+Note: Supported obfuscation types: ObfuscationServiceMCP supports [notch] ObfuscationServiceFG3 supports [searge]
+Note: Loading searge mappings from C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\build\createMcpToSrg\output.tsrg
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\mixin\forge\MixinMinecraftServer.java:42: warning: Unable to determine descriptor for @Inject target method
+	@Inject(
+	^
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\mixin\terrablender\MixinParameterList.java:24: warning: Unable to determine descriptor for @Inject target method
+	@Inject(
+	^
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\mixin\terrablender\MixinParameterList.java:42: warning: Unable to determine descriptor for @Redirect target method
+	@Redirect(
+	^
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\mixin\terrablender\MixinParameterList.java:42: warning: Unable to locate method mapping for @At(INVOKE.<target>) 'Lnet/minecraft/world/level/biome/Climate$ParameterList;getUniqueness(III)I'
+	@Redirect(
+	^
+Note: Writing refmap to C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\build\tmp\compileJava\compileJava-refmap.json
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\mixin\terrablender\MixinParameterList.java:62: warning: Cannot find target for @Shadow method in net.minecraft.world.level.biome.Climate$ParameterList
+	@Shadow
+	^
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\mixin\terrablender\MixinParameterList.java:62: warning: Unable to locate obfuscation mapping for @Shadow method
+	@Shadow
+	^
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\mixin\MixinNoiseRouterData.java:15: error: Could not locate @Invoker target registerAndWrap in target net.minecraft.world.level.levelgen.NoiseRouterData
+    @Invoker("registerAndWrap")
+    ^
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\mixin\ScreenInvoker.java:16: warning: Unable to locate obfuscation mapping for @Accessor target addRenderableWidget
+	@Invoker("addRenderableWidget")
+	^
+Note: Writing refmap to C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\build\tmp\compileJava\compileJava-refmap.json
+Note: Writing searge composite mappings to C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\build\tmp\compileJava\compileJava-mappings.tsrg
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\Preset.java:12: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\Preset.java:72: error: cannot find symbol
+        void apply(Preset preset, BootstrapContext<T> ctx);
+                                  ^
+  symbol:   class BootstrapContext
+  location: interface Patch<T>
+  where T is a type-variable:
+    T extends Object declared in interface Patch
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\BiomeModifierData.java:9: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\BiomeModifierData.java:31: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<BiomeModifier> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class BiomeModifierData
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\ClimateNoise.java:3: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\ClimateNoise.java:13: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<Noise> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class ClimateNoise
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\NoiseData.java:4: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\NoiseData.java:14: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<Noise> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class NoiseData
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\NoiseData.java:25: error: cannot find symbol
+	public static Noise registerAndWrap(BootstrapContext<Noise> ctx, ResourceKey<Noise> key, Noise noise) {
+	                                    ^
+  symbol:   class BootstrapContext
+  location: class NoiseData
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetBiomeData.java:5: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetBiomeData.java:35: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<Biome> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class PresetBiomeData
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetBiomeModifierData.java:9: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetBiomeModifierData.java:53: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<BiomeModifier> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class PresetBiomeModifierData
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetClimateNoise.java:3: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetClimateNoise.java:13: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<Noise> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class PresetClimateNoise
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetConfiguredCarvers.java:5: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetConfiguredCarvers.java:30: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<ConfiguredWorldCarver<?>> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class PresetConfiguredCarvers
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetConfiguredFeatures.java:12: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetConfiguredFeatures.java:105: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<ConfiguredFeature<?, ?>> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class PresetConfiguredFeatures
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetDimensionTypes.java:5: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetDimensionTypes.java:15: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<DimensionType> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class PresetDimensionTypes
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetNoiseData.java:4: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetNoiseData.java:14: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<Noise> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class PresetNoiseData
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetNoiseData.java:25: error: cannot find symbol
+	public static Noise registerAndWrap(BootstrapContext<Noise> ctx, ResourceKey<Noise> key, Noise noise) {
+	                                    ^
+  symbol:   class BootstrapContext
+  location: class PresetNoiseData
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetNoiseGeneratorSettings.java:7: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetNoiseGeneratorSettings.java:21: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<NoiseGeneratorSettings> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class PresetNoiseGeneratorSettings
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetNoiseRouterData.java:7: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetNoiseRouterData.java:35: error: cannot find symbol
+    public static void bootstrap(Preset preset, BootstrapContext<DensityFunction> ctx) {
+                                                ^
+  symbol:   class BootstrapContext
+  location: class PresetNoiseRouterData
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetPlacedFeatures.java:7: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetPlacedFeatures.java:81: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<PlacedFeature> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class PresetPlacedFeatures
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetStrataNoise.java:3: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetStrataNoise.java:14: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<Noise> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class PresetStrataNoise
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetStructureRuleData.java:3: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetStructureRuleData.java:15: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<StructureRule> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class PresetStructureRuleData
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetSurfaceNoise.java:3: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetSurfaceNoise.java:38: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<Noise> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class PresetSurfaceNoise
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetSurfaceNoise.java:81: error: cannot find symbol
+	private static void registerIceberg(BootstrapContext<Noise> ctx, ResourceKey<Noise> shapeKey, ResourceKey<Noise> maskKey, ResourceKey<Noise> fadeDownKey, ResourceKey<Noise> fadeUpKey, ResourceKey<Noise> upKey, ResourceKey<Noise> downKey, ResourceKey<Noise> topKey, Scaling scaling, int height, int depth, int seedOffset) {
+	                                    ^
+  symbol:   class BootstrapContext
+  location: class PresetSurfaceNoise
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetTerrainNoise.java:3: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetTerrainNoise.java:24: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<Noise> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class PresetTerrainNoise
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetTerrainTypeNoise.java:3: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\preset\PresetTerrainTypeNoise.java:13: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<Noise> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class PresetTerrainTypeNoise
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\RTFBiomeData.java:5: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\RTFBiomeData.java:35: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<Biome> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class RTFBiomeData
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\RTFConfiguredCarvers.java:5: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\RTFConfiguredCarvers.java:30: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<ConfiguredWorldCarver<?>> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class RTFConfiguredCarvers
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\RTFConfiguredFeatures.java:12: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\RTFConfiguredFeatures.java:64: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<ConfiguredFeature<?, ?>> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class RTFConfiguredFeatures
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\RTFDimensionTypes.java:5: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\RTFDimensionTypes.java:15: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<DimensionType> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class RTFDimensionTypes
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\RTFNoiseGeneratorSettings.java:5: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\RTFNoiseGeneratorSettings.java:19: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<NoiseGeneratorSettings> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class RTFNoiseGeneratorSettings
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\RTFNoiseRouterData.java:7: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\RTFNoiseRouterData.java:36: error: cannot find symbol
+    public static void bootstrap(Preset preset, BootstrapContext<DensityFunction> ctx) {
+                                                ^
+  symbol:   class BootstrapContext
+  location: class RTFNoiseRouterData
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\RTFPlacedFeatures.java:5: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\RTFPlacedFeatures.java:32: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<PlacedFeature> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class RTFPlacedFeatures
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\StrataNoise.java:3: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\StrataNoise.java:14: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<Noise> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class StrataNoise
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\StructureRuleData.java:3: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\StructureRuleData.java:15: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<StructureRule> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class StructureRuleData
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\SurfaceNoise.java:3: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\SurfaceNoise.java:38: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<Noise> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class SurfaceNoise
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\SurfaceNoise.java:81: error: cannot find symbol
+	private static void registerIceberg(BootstrapContext<Noise> ctx, ResourceKey<Noise> shapeKey, ResourceKey<Noise> maskKey, ResourceKey<Noise> fadeDownKey, ResourceKey<Noise> fadeUpKey, ResourceKey<Noise> upKey, ResourceKey<Noise> downKey, ResourceKey<Noise> topKey, Scaling scaling, int height, int depth, int seedOffset) {
+	                                    ^
+  symbol:   class BootstrapContext
+  location: class SurfaceNoise
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\TerrainNoise.java:3: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\TerrainNoise.java:24: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<Noise> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class TerrainNoise
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\TerrainTypeNoise.java:3: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\data\worldgen\TerrainTypeNoise.java:13: error: cannot find symbol
+	public static void bootstrap(Preset preset, BootstrapContext<Noise> ctx) {
+	                                            ^
+  symbol:   class BootstrapContext
+  location: class TerrainTypeNoise
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\mixin\MixinAbstractSelectionList.java:11: error: Entry has protected access in AbstractSelectionList
+public interface MixinAbstractSelectionList<E extends AbstractSelectionList.Entry<E>> {
+                                                                           ^
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\mixin\MixinNoiseRouterData.java:7: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstrapContext;
+                                  ^
+  symbol:   class BootstrapContext
+  location: package net.minecraft.data.worldgen
+C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\src\main\java\rayman\rtfs\mixin\MixinNoiseRouterData.java:16: error: cannot find symbol
+    static DensityFunction invokeRegisterAndWrap(BootstrapContext<DensityFunction> ctx, ResourceKey<DensityFunction> key, DensityFunction function) {
+                                                 ^
+  symbol:   class BootstrapContext
+  location: interface MixinNoiseRouterData
+Note: Writing refmap to C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\build\tmp\compileJava\compileJava-refmap.json
+Note: Writing refmap to C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\build\tmp\compileJava\compileJava-refmap.json
+Note: Writing searge composite mappings to C:\Users\Руслан\Downloads\ForkReTerraForgedSpecial-main\ForkReTerraForgedSpecial-main\build\tmp\compileJava\compileJava-mappings.tsrg
+70 errors
+7 warnings
+
+> Task :compileJava FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 30s
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+See https://docs.gradle.org/8.1/userguide/command_line_interface.html#sec:command_line_warnings
+4 actionable tasks: 2 executed, 2 up-to-date
+20:20:07: Execution finished 'runClient'.
