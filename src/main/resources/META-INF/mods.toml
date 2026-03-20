@@ -5,7 +5,7 @@ mixinConfigs="rtfs.mixins.json"
 
 [[mods]]
 modId="rtfs"
-displayName="ReTerraForged"
+displayName="RTFS"
 version="${version}"
 authors="rayman"
 credits="rayman"

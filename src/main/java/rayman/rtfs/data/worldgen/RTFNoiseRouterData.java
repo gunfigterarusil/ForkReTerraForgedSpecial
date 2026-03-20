@@ -51,10 +51,10 @@ public class RTFNoiseRouterData {
         ctx.register(rayman.rtfs.mixin.MixinNoiseRouterData.getRIDGES(), RTFDensityFunctions.cell(CellSampler.Field.WEIRDNESS));
 
         DensityFunction height = rayman.rtfs.mixin.MixinNoiseRouterData.invokeRegisterAndWrap(ctx, HEIGHT, RTFDensityFunctions.cell(CellSampler.Field.HEIGHT));
-        DensityFunction offset = rayman.rtfs.mixin.MixinNoiseRouterData.invokeRegisterAndWrap(ctx, rayman.rtfs.mixin.MixinNoiseRouterData.getOFFSET(), DensityFunctions.add(DensityFunctions.constant(NoiseRouterData.GLOBAL_OFFSET), DensityFunctions.mul(DensityFunctions.add(DensityFunctions.mul(DensityFunctions.constant(-1.0D), RTFDensityFunctions.noise(noises.getOrThrow(TerrainTypeNoise.GROUND))), RTFDensityFunctions.clampToNearestUnit(RTFDensityFunctions.conditionalArrayCache(height), properties.terrainScaler())), DensityFunctions.constant(2.0D))));
+        DensityFunction offset = rayman.rtfs.mixin.MixinNoiseRouterData.invokeRegisterAndWrap(ctx, rayman.rtfs.mixin.MixinNoiseRouterData.getOFFSET(), DensityFunctions.add(DensityFunctions.constant(rayman.rtfs.mixin.MixinNoiseRouterData.getGLOBAL_OFFSET()), DensityFunctions.mul(DensityFunctions.add(DensityFunctions.mul(DensityFunctions.constant(-1.0D), RTFDensityFunctions.noise(noises.getOrThrow(TerrainTypeNoise.GROUND))), RTFDensityFunctions.clampToNearestUnit(RTFDensityFunctions.conditionalArrayCache(height), properties.terrainScaler())), DensityFunctions.constant(2.0D))));
         ctx.register(rayman.rtfs.mixin.MixinNoiseRouterData.getDEPTH(), DensityFunctions.add(DensityFunctions.yClampedGradient(-worldDepth, worldHeight, yGradientRange(-worldDepth), yGradientRange(worldHeight)), offset));
         ctx.register(rayman.rtfs.mixin.MixinNoiseRouterData.getBASE_3D_NOISE_OVERWORLD(), DensityFunctions.zero());
-        ctx.register(NoiseRouterData.JAGGEDNESS, jaggednessPerformanceHack());
+        ctx.register(rayman.rtfs.mixin.MixinNoiseRouterData.getJAGGEDNESS(), jaggednessPerformanceHack());
 
         ctx.register(rayman.rtfs.mixin.MixinNoiseRouterData.getNOODLE(), noodle(-worldDepth, worldHeight, 1.0F - caveSettings.noodleCaveProbability, densityFunctions, noiseParams));
         ctx.register(rayman.rtfs.mixin.MixinNoiseRouterData.getENTRANCES(), probabilityDensity(caveSettings.entranceCaveProbability, rayman.rtfs.mixin.MixinNoiseRouterData.invokeEntrances(densityFunctions, noiseParams)));
@@ -118,7 +118,7 @@ public class RTFNoiseRouterData {
         DensityFunction modulator = DensityFunctions.noise(noiseParams.getOrThrow(Noises.SPAGHETTI_2D_MODULATOR), 2.0, 1.0);
         DensityFunction sampler = DensityFunctions.weirdScaledSampler(modulator, noiseParams.getOrThrow(Noises.SPAGHETTI_2D), DensityFunctions.WeirdScaledSampler.RarityValueMapper.TYPE2);
         DensityFunction elevation = DensityFunctions.mappedNoise(noiseParams.getOrThrow(Noises.SPAGHETTI_2D_ELEVATION), 0.0, Math.floorDiv(minY, 8), 8.0);
-        DensityFunction thicknessModulator = rayman.rtfs.mixin.MixinNoiseRouterData.invokeGetFunction(densityFunctions, rayman.rtfs.mixin.MixinNoiseRouterData.getSPAGHETTI_2D()_THICKNESS_MODULATOR);
+        DensityFunction thicknessModulator = rayman.rtfs.mixin.MixinNoiseRouterData.invokeGetFunction(densityFunctions, rayman.rtfs.mixin.MixinNoiseRouterData.getSPAGHETTI_2D_THICKNESS_MODULATOR());
         DensityFunction elevationGradient = DensityFunctions.add(elevation, DensityFunctions.yClampedGradient(minY, maxY, minY / -8.0D, maxY / -8.0D)).abs();
         DensityFunction normal = DensityFunctions.add(elevationGradient, thicknessModulator).cube();
         DensityFunction weird = DensityFunctions.add(sampler, DensityFunctions.mul(DensityFunctions.constant(0.083D), thicknessModulator));

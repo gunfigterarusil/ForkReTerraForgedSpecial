@@ -15,8 +15,8 @@ public final class RTFLanguageProvider {
 
 		@Override
 		protected void addTranslations() {
-			this.add(RTFTranslationKeys.METADATA_DESCRIPTION, "ReTerraForged resources");
-			this.add(RTFTranslationKeys.PRESET_METADATA_DESCRIPTION, "ReTerraForged preset");
+			this.add(RTFTranslationKeys.METADATA_DESCRIPTION, "RTFS resources");
+			this.add(RTFTranslationKeys.PRESET_METADATA_DESCRIPTION, "RTFS preset");
 			this.add(RTFTranslationKeys.MUD_SWAMPS_METADATA_DESCRIPTION, "Changes the swamp material to mud");
 			this.add(RTFTranslationKeys.NO_ERROR_MESSAGE, "{No error message}");
 

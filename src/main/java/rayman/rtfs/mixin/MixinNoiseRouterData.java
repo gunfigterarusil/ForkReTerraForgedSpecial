@@ -77,4 +77,7 @@ public interface MixinNoiseRouterData {
     static ResourceKey<DensityFunction> getY() { throw new UnsupportedOperationException(); }
     @Accessor("BASE_3D_NOISE_OVERWORLD")
     static ResourceKey<DensityFunction> getBASE_3D_NOISE_OVERWORLD() { throw new UnsupportedOperationException(); }
+
+    @Accessor("GLOBAL_OFFSET")
+    static float getGLOBAL_OFFSET() { throw new UnsupportedOperationException(); }
 }
