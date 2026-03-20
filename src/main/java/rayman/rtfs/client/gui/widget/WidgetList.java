@@ -75,9 +75,9 @@ public class WidgetList<T extends AbstractWidget> extends ContainerObjectSelecti
             widget.setY(top);
             widget.visible = true;
             widget.setWidth(optionWidth);
-            widget.height = (height - 1);
+            ((rayman.rtfs.mixin.MixinAbstractWidget) widget).setHeight(height - 1);
             if(widget instanceof PresetEditorPage.Preview preview) {
-		widget.height = (widget.getWidth());
+		((rayman.rtfs.mixin.MixinAbstractWidget) widget).setHeight(widget.getWidth());
             }
             widget.render(guiGraphics, mouseX, mouseY, partialTicks);
         }
