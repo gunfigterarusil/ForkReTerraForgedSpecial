@@ -31,7 +31,7 @@ import net.minecraftforge.registries.GameData;
 
 // this class sucks and i hate it
 //TODO we should probably override default methods here too
-class DeferredRegistry<T> implements Registry<T> {
+public class DeferredRegistry<T> implements Registry<T> {
 	private ResourceKey<? extends Registry<T>> key;
 	protected Supplier<Registry<T>> registry;
 

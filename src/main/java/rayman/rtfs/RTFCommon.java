@@ -28,7 +28,7 @@ import rayman.rtfs.world.worldgen.surface.rule.RTFSurfaceRules;
 public class RTFCommon {
 	public static final String MOD_ID = "rtfs";
 	public static final String LEGACY_MOD_ID = "terraforged";
-	public static final Logger LOGGER = LogManager.getLogger("ReTerraForged");
+	public static final Logger LOGGER = LogManager.getLogger("rtfs");
 
 	public static void bootstrap() {
 		RTFBuiltInRegistries.bootstrap();
