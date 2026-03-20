@@ -1,0 +1,2 @@
+src/main/java/rayman/rtfs/client/data/RTFLanguageProvider.java:			this.add(RTFTranslationKeys.METADATA_DESCRIPTION, "ReTerraForged resources");
+src/main/java/rayman/rtfs/client/data/RTFLanguageProvider.java:			this.add(RTFTranslationKeys.PRESET_METADATA_DESCRIPTION, "ReTerraForged preset");

@@ -1,0 +1,40 @@
+{
+  "required": true,
+  "plugin": "rayman.rtfs.mixin.plugin.MixinPlugin",
+  "package": "rayman.rtfs.mixin",
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "MixinNoiseChunk",
+    "MixinRandomState",
+    "MixinChunkMap",
+    "MixinUtil",
+    "MixinAbstractWidget",
+    "MixinSurfaceRulesContext",
+    "MixinOreVeinifierVeinType",
+    "MixinNoiseRouterData",
+    "MixinCreateWorldScreen",
+    "MixinAbstractSelectionList",
+    "MixinBiomeGenerationSettings",
+    "MixinSurfaceSystem",
+    "MixinStructure",
+    "MixinMinecraftServer",
+    "MixinSpawnFinder",
+    "terrablender.MixinParameterList",
+    "terrablender.MixinClimateSampler",
+    "terrablender.MixinTargetPoint",
+    "terrablender.MixinNoiseChunk",
+    "forge.MixinTagsProvider",
+    "forge.MixinBiomeGenerationSettingsPlainBuilder",
+    "forge.MixinChunkStatus",
+    "forge.MixinMinecraftServer",
+    "forge.MixinStructurePlacement"
+  ],
+  "client": [
+    "ScreenInvoker"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "rtfs.refmap.json"
+}
