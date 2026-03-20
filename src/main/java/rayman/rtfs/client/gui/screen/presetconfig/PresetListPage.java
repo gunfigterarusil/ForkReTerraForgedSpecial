@@ -79,7 +79,7 @@ class PresetListPage extends BisectedPage<PresetConfigScreen, PresetEntry, Abstr
 	public void init() {
 		super.init();
 
-		this.input = PresetWidgets.createEditBox(this.screen.font, (text) -> {
+		this.input = PresetWidgets.createEditBox(net.minecraft.client.Minecraft.getInstance().font, (text) -> {
 			boolean isValid = this.isValidPresetName(text);
 			final int white = 14737632;
 			final int red = 0xFFFF3F30;

@@ -142,7 +142,7 @@ public abstract class PresetEditorPage extends BisectedPage<PresetConfigScreen, 
 			if(b instanceof Preview self) {
 			        if (self.updateLegend((int) mouse.xpos(), (int) mouse.ypos()) && !self.hoveredCoords.isEmpty()) {
 			            self.playDownSound(Minecraft.getInstance().getSoundManager());
-			            PresetEditorPage.this.screen.minecraft.keyboardHandler.setClipboard(self.hoveredCoords);
+			            PresetEditorPage.net.minecraft.client.Minecraft.getInstance().keyboardHandler.setClipboard(self.hoveredCoords);
 			        }
 			}
 	        }, DEFAULT_NARRATION);
@@ -255,7 +255,7 @@ public abstract class PresetEditorPage extends BisectedPage<PresetConfigScreen, 
 	    }
 
 	    private float getLegendScale() {
-	        int index = PresetEditorPage.this.screen.minecraft.options.guiScale().get() - 1;
+	        int index = PresetEditorPage.net.minecraft.client.Minecraft.getInstance().options.guiScale().get() - 1;
 	        if (index < 0 || index >= LEGEND_SCALES.length) {
 	            // index=-1 == GuiScale(AUTO) which is the same as GuiScale(4)
 	            // values above 4 don't exist but who knows what mods might try set it to

@@ -40,28 +40,28 @@ public class PresetConfigScreen extends LinkedPageScreen {
 	public void onClose() {
 		super.onClose();
 
-		this.minecraft.setScreen(this.parent);
+		net.minecraft.client.Minecraft.getInstance().setScreen(this.parent);
 	}
 
 	public void setSeed(long seed) {
 		//TODO update the seed edit box
-		this.parent.getUiState().setSettings(this.getSettings().withOptions((options) -> {
+		((rayman.rtfs.mixin.MixinCreateWorldScreen) this.parent).getUiState().setSettings(this.getSettings().withOptions((options) -> {
 			return new WorldOptions(seed, options.generateStructures(), options.generateBonusChest());
 		}));
 	}
 
 	public WorldCreationContext getSettings() {
-		return this.parent.getUiState().getSettings();
+		return ((rayman.rtfs.mixin.MixinCreateWorldScreen) this.parent).getUiState().getSettings();
 	}
 
 	public void applyPreset(PresetEntry preset) throws IOException {
-		Pair<Path, PackRepository> path = this.parent.getDataPackSelectionSettings(this.parent.getUiState().getSettings().dataConfiguration());
+		Pair<Path, PackRepository> path = ((rayman.rtfs.mixin.MixinCreateWorldScreen) this.parent).invokeGetDataPackSelectionSettings(((rayman.rtfs.mixin.MixinCreateWorldScreen) this.parent).getUiState().getSettings().dataConfiguration());
 		Path exportPath = path.getFirst().resolve("rtfs-preset.zip");
 		this.exportAsDatapack(exportPath, preset);
 		PackRepository repository = path.getSecond();
 		repository.reload();
 		if(repository.addPack("file/" + exportPath.getFileName())) {
-			this.parent.tryApplyNewDataPacks(repository, false, (data) -> {
+			((rayman.rtfs.mixin.MixinCreateWorldScreen) this.parent).invokeTryApplyNewDataPacks(repository, false, (data) -> {
 			});
 		}
 	}

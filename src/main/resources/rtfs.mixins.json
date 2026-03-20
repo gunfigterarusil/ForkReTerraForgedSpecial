@@ -9,6 +9,12 @@
     "MixinRandomState",
     "MixinChunkMap",
     "MixinUtil",
+    "MixinAbstractWidget",
+    "MixinSurfaceRulesContext",
+    "MixinOreVeinifierVeinType",
+    "MixinNoiseRouterData",
+    "MixinCreateWorldScreen",
+    "MixinAbstractSelectionList",
     "MixinBiomeGenerationSettings",
     "MixinSurfaceSystem",
     "MixinStructure",
@@ -21,7 +27,8 @@
     "forge.MixinTagsProvider",
     "forge.MixinBiomeGenerationSettingsPlainBuilder",
     "forge.MixinChunkStatus",
-    "forge.MixinMinecraftServer"
+    "forge.MixinMinecraftServer",
+    "forge.MixinStructurePlacement"
   ],
   "client": [
     "ScreenInvoker"

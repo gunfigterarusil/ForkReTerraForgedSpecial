@@ -51,7 +51,7 @@ public class StructureSettingsPage extends PresetEditorPage {
 			StructureSet set = holder.value();
 			if(set.placement() instanceof RandomSpreadStructurePlacement placement) {
 				structures.entries.computeIfAbsent(holder.key(), (k) -> {
-					return new StructureSetEntry(placement.spacing(), placement.separation(), placement.salt(), false);
+					return new StructureSetEntry(placement.spacing(), placement.separation(), ((rayman.rtfs.mixin.forge.MixinStructurePlacement) (Object) placement).getSalt(), false);
 				});
 			}
 		});

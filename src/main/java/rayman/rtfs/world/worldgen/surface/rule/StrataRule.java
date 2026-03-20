@@ -41,7 +41,7 @@ public record StrataRule(ResourceLocation name, Holder<Noise> selector, List<Str
 
 	@Override
 	public SurfaceRules.SurfaceRule apply(Context ctx) {
-		if(ctx.system instanceof RTFSurfaceSystem rtfSurfaceSystem && (Object) ctx.randomState instanceof RTFRandomState rtfRandomState) {
+		if(((rayman.rtfs.mixin.MixinSurfaceRulesContext) (Object) ctx).getSystem() instanceof RTFSurfaceSystem rtfSurfaceSystem && (Object) ((rayman.rtfs.mixin.MixinSurfaceRulesContext) (Object) ctx).getRandomState() instanceof RTFRandomState rtfRandomState) {
 			return new Source(ctx, rtfRandomState.seed(this.selector.value()), rtfSurfaceSystem.getOrCreateStrata(this.name, this::generateStrata));
 		}
 		// Non-RTF context (vanilla world or wrong dimension): return a no-op rule
@@ -127,9 +127,9 @@ public record StrataRule(ResourceLocation name, Holder<Noise> selector, List<Str
         @Nullable
 		@Override
 		public BlockState tryApply(int x, int y, int z) {
-		if(this.lastUpdateXZ != this.surfaceContext.lastUpdateXZ) {
+		if(this.lastUpdateXZ != ((rayman.rtfs.mixin.MixinSurfaceRulesContext) (Object) this.surfaceContext).getLastUpdateXZ()) {
 			this.initBuffer(x, z);
-			this.lastUpdateXZ = this.surfaceContext.lastUpdateXZ;
+			this.lastUpdateXZ = ((rayman.rtfs.mixin.MixinSurfaceRulesContext) (Object) this.surfaceContext).getLastUpdateXZ();
 		}
 
 		Layer last = null;
@@ -151,9 +151,9 @@ public record StrataRule(ResourceLocation name, Holder<Noise> selector, List<Str
 	            this.depthBuffer = new float[layerCount];
 	        }
 
-            int localX = this.surfaceContext.blockX & 0xF;
-            int localZ = this.surfaceContext.blockZ & 0xF;
-            int height = this.surfaceContext.chunk.getHeight(Heightmap.Types.WORLD_SURFACE_WG, localX, localZ);
+            int localX = ((rayman.rtfs.mixin.MixinSurfaceRulesContext) (Object) this.surfaceContext).getBlockX() & 0xF;
+            int localZ = ((rayman.rtfs.mixin.MixinSurfaceRulesContext) (Object) this.surfaceContext).getBlockZ() & 0xF;
+            int height = ((rayman.rtfs.mixin.MixinSurfaceRulesContext) (Object) this.surfaceContext).getChunk().getHeight(Heightmap.Types.WORLD_SURFACE_WG, localX, localZ);
 
             float sum = 0.0F;
             for(int i = 0; i < layerCount; i++) {
