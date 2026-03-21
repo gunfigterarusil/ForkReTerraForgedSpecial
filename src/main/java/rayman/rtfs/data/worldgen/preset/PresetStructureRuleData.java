@@ -1,6 +1,6 @@
 package rayman.rtfs.data.worldgen.preset;
 
-import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import rayman.rtfs.RTFCommon;
 import rayman.rtfs.data.worldgen.preset.Preset;
@@ -12,7 +12,7 @@ import rayman.rtfs.world.worldgen.structure.rule.StructureRules;
 public class PresetStructureRuleData {
 	public static final ResourceKey<StructureRule> CELL_TEST = createKey("cell_test");
 
-	public static void bootstrap(Preset preset, BootstrapContext<StructureRule> ctx) {
+	public static void bootstrap(Preset preset, BootstapContext<StructureRule> ctx) {
 		ctx.register(CELL_TEST, StructureRules.cellTest(0.225F, TerrainType.MOUNTAIN_CHAIN, TerrainType.MOUNTAINS_1, TerrainType.MOUNTAINS_2, TerrainType.MOUNTAINS_3));
 	}
 

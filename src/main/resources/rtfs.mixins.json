@@ -12,7 +12,6 @@
     "MixinAbstractWidget",
     "MixinSurfaceRulesContext",
     "MixinOreVeinifierVeinType",
-    "MixinNoiseRouterData",
     "MixinCreateWorldScreen",
     "MixinAbstractSelectionList",
     "MixinBiomeGenerationSettings",
@@ -31,7 +30,6 @@
     "forge.MixinStructurePlacement"
   ],
   "client": [
-    "ScreenInvoker"
   ],
   "injectors": {
     "defaultRequire": 1

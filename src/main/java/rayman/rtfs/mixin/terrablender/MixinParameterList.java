@@ -24,7 +24,8 @@ class MixinParameterList<T> {
 	@Inject(
 		at = @At("HEAD"),
 		method = "initializeForTerraBlender",
-		require = 1
+		require = 0,
+		remap = false
 	)
     public void initializeForTerraBlender(RegistryAccess registryAccess, RegionType regionType, long seed, CallbackInfo callback) {
 	this.maxIndex = Regions.getCount(regionType) - 1;
@@ -45,7 +46,8 @@ class MixinParameterList<T> {
 			value = "INVOKE",
 			target = "Lnet/minecraft/world/level/biome/Climate$ParameterList;getUniqueness(III)I"
 		),
-		require = 0
+		require = 0,
+		remap = false
 	)
     public int getUniqueness(Climate.ParameterList<T> parameterList, int x, int y, int z, Climate.TargetPoint targetPoint) {
 		if((Object) targetPoint instanceof TBTargetPoint tbTargetPoint) {
@@ -59,7 +61,7 @@ class MixinParameterList<T> {
 		return this.getUniqueness(x, y, z);
     }
 
-	@Shadow
+	@Shadow(remap = false)
     public int getUniqueness(int x, int y, int z) {
 	throw new UnsupportedOperationException();
     }

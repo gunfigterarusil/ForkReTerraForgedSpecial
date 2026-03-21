@@ -28,7 +28,7 @@ public class MixinMinecraftServer {
 	private FeatureTemplateManager templateManager;
 
 	@Inject(
-		method = "<init>(Ljava/lang/Thread;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/server/WorldStem;Ljava/net/Proxy;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/server/Services;Lnet/minecraft/server/level/progress/ChunkProgressListenerFactory;)V",
+		method = "<init>",
 		at = @At("TAIL")
 	)
 	public void MinecraftServer(Thread thread, LevelStorageSource.LevelStorageAccess arg2, PackRepository arg22, WorldStem arg3, Proxy proxy, DataFixer dataFixer, Services arg4, ChunkProgressListenerFactory arg5, CallbackInfo callback) {

@@ -3,7 +3,6 @@ package rayman.rtfs.client.gui;
 import net.minecraft.client.gui.components.Renderable;
 import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.client.gui.screens.Screen;
-import rayman.rtfs.mixin.ScreenInvoker;
 
 public class ColumnAlignment {
 	private Screen parent;
@@ -28,7 +27,7 @@ public class ColumnAlignment {
 		int columnWidth = Math.max(0, Math.round(columnSize * pageWidth) - (2 * this.horizontalPadding));
 		T column = factory.apply(this.left, this.verticalMargin, columnWidth, height, this.horizontalPadding, this.verticalPadding);
 		this.left += columnWidth > 0 ? columnWidth + (2 * this.horizontalPadding) : 0;
-		((ScreenInvoker) this.parent).invokeAddRenderableWidget(column);
+		this.parent.addRenderableWidget(column);
 		return column;
 	}
 
